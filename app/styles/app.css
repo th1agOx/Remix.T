@@ -1,0 +1,27 @@
+:root, 
+html{
+  font-size: 62.5% ;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  background-color: rgb(255, 255, 255);
+}
+
+body,h1 {
+  font-size: 1.4rem;
+}
+
+.searchWrapper {
+  display: flex;
+  gap: .5rem
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  color:rgb(73, 72, 72) ;
+  text-decoration: none;
+}
