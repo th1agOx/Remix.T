@@ -1,6 +1,6 @@
 // "$" works as a parameter where any id on register can be load
 
-import Contact from "~/components/Contact";
+import Contact from "~/components/ContactProfile";
 import { json,LoaderFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import type { FunctionComponent } from "react";

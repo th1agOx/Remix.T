@@ -13,14 +13,20 @@ export const meta: MetaFunction = () => {
     return [
         { charSet: "utf-8" },
         { title: "Tuto Remix" },
-        { viewport: "width=device-width, initial-scale=1" }
+        { viewport: "width=device-width, initial-scale=1"}
     ]
 }
 
 export const links: LinksFunction = () => {
     return [
-        { rel:"stylesheet", href: appStyledsHref },
-        { rel: "preconnect", href: "https://fonts.googleapis.com" },
+        { 
+            rel:"stylesheet", 
+            href: appStyledsHref 
+        },
+        { 
+            rel: "preconnect",
+             href: "https://fonts.googleapis.com" 
+        },
         {
             rel: "preconnect",
             href: "https://fonts.gstatic.com",
@@ -28,8 +34,9 @@ export const links: LinksFunction = () => {
         },
         {
             rel: "stylesheet",
-            href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
+            href: "https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap",
         },
+        { rel: "preload", href: "/favicon.ico",as: "image", type: "image/svg+xml" },
     ]
 }
 
@@ -42,7 +49,6 @@ export default function App( {children}: { children: React.ReactNode }) {
         </head>
         <body>
             <div className="sidebar">
-                <h1>Remix Contacts</h1>
                 <div className="searchWrapper">
                     <form id="search-form" role="search" >
                             <input 
@@ -65,13 +71,19 @@ export default function App( {children}: { children: React.ReactNode }) {
                <nav>
                 <ul>
                     <li>
-                        <a href={`/contacts/1`}>Your Name</a>
+                        <a href={`/contacts/1`}>Your Profile</a>
                     </li>
                     <li>
-                        <a href={`/contacts/2`}>Your Friend Name</a>
+                        <a href={`/contacts/2`}>Your Friend</a>
                     </li>
                 </ul>
                </nav>
+               <div className="sidebarFotter">
+                    <div className="remixIcon"></div>
+                    <h1> 
+                        BY <a href="https://github.com/th1agOx?tab=repositories" target="blank">TH1AGOX</a> 
+                    </h1>
+                </div> 
             </div>
             {children}
             <ScrollRestoration/>
